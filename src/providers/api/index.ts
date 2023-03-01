@@ -11,4 +11,5 @@ export class ApiRoutes {
     static characters = () => '/character'
     static episodes = () => '/episode'
     static characterById = (id: string) => `/characters/${id}`
+    static episodeByID = (id: string) => `/episode/${id}`
 }
