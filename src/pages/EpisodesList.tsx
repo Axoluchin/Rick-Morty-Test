@@ -12,7 +12,6 @@ import { Episode, Page } from "../providers/api/models";
 
 export function EpisodesList() {
   const [pagination, setPagination] = useState<{ page: number }>({ page: 1 })
-
   const [{ data: episodesPage, loading, error }] = useAxios<Page<Episode>>({ url: ApiRoutes.episodes() })
 
   const nextPage = () => {
@@ -27,7 +26,7 @@ export function EpisodesList() {
         {error && <p className='text-danger'>{error.toString()}</p>}
         <Row>
           {episodesPage?.results.map((episode) => (
-            <EpisodeTile episode={episode} />
+            <EpisodeTile episode={episode} key={episode.id}/>
           ))}
         </Row>
         <Button onClick={nextPage}>Next page</Button>
