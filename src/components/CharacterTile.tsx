@@ -8,7 +8,7 @@ interface CharacterTileProps {
   character: Character
 }
 
-export function CharacterTile({ character }: CharacterTileProps) {
+const CharacterTile = ({ character }: CharacterTileProps) =>{
   const [Episode, setEpisode] = useState<string | undefined>()
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export function CharacterTile({ character }: CharacterTileProps) {
     unknown: 'yellow',
   }
   return (
-    <Col md="6" className="character-tile" key={character.id}>
+    <Col md="6" className="character-tile">
       <div className="character-container">
         <img src={character.image} />
         <div className="info">
@@ -50,3 +50,5 @@ export function CharacterTile({ character }: CharacterTileProps) {
     </Col>
   )
 }
+
+export default CharacterTile

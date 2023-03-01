@@ -1,8 +1,9 @@
 import Container from 'react-bootstrap/Container'
-import { ApiRoutes, useAxios } from '../providers/api'
 import { useParams } from 'react-router-dom'
 
+import Header from '../components/Header'
 import EpisodeCharacter from '../components/EpisodeCharacter'
+import { ApiRoutes, useAxios } from '../providers/api'
 import { Episode } from '../providers/api/models/Episode'
 
 export function EpisodeDetail() {
@@ -17,6 +18,7 @@ export function EpisodeDetail() {
 
   return (
     <div className="EpisodesList">
+      <Header status='Episode'/>
       <Container>
         <div className="grid">
           <p>
