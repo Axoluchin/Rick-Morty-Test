@@ -20,13 +20,16 @@ export function EpisodeTile({ episode }: EpisodeTileProps) {
             <small>Air date:</small>
           </p>
           <p className="air-date">{episode.air_date}</p>
-          <div className="d-grid gap-2">
-            <Button variant="outline-secondary" size="lg">
-              <Link to={`${episode.id}`} style={{ color: 'white' }}>
+          <Link to={`${episode.id}`}>
+            <div className="d-grid gap-2">
+              <Button
+                variant="outline-secondary"
+                style={{ color: 'white' }}
+              >
                 Open detail
-              </Link>
-            </Button>
-          </div>
+              </Button>
+            </div>
+          </Link>
         </div>
       </div>
     </Col>
