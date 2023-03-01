@@ -9,6 +9,6 @@ export const useAxios = makeUseAxios({
 
 export class ApiRoutes {
     static characters = () => '/character'
-    static episodes = () => '/episodes'
+    static episodes = () => '/episode'
     static characterById = (id: string) => `/characters/${id}`
 }
