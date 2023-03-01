@@ -1,6 +1,10 @@
 .episode-tile {
   padding: 10px;
 
+  p {
+    margin: 4px;
+  }
+
   .container {
     padding: 10px;
     display: flex;
@@ -15,29 +19,25 @@
   }
 
   .title {
-    font-family: 'Helvetica Neue';
-    font-style: normal;
     font-weight: 700;
-    font-size: 14px;
     line-height: 150%;
+    margin: 4px;
   }
 
   .air-date {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
-    font-size: 12px;
     line-height: 110%;
-    /* or 13px */
 
     letter-spacing: 0.1em;
   }
 
-  small {
-    font-family: 'Helvetica Neue';
-    font-style: normal;
+  .btn {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  small { 
     font-weight: 400;
-    line-height: 150%;
     color: rgba(173, 173, 173, 1);
   }
 }
