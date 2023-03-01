@@ -1,5 +1,6 @@
 
 @import "CharacterTile.scss";
+@import "EpisodeDetail.scss";
 @import "EpisodeTile.scss";
 @import "Header.scss";
 
@@ -9,4 +10,5 @@ body {
 
 a {
     text-decoration: none;
+    color: white;
 }
