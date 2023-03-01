@@ -13,22 +13,23 @@ export function EpisodeTile({ episode }: EpisodeTileProps) {
     <Col md="6" className="episode-tile" key={episode.id}>
       <div className="container">
         <div className="info">
-          <p className="title">
+          <h5 className="title">
             {episode.episode} - {episode.name}
-          </p>
+          </h5>
           <p>
             <small>Air date:</small>
           </p>
           <p className="air-date">{episode.air_date}</p>
           <Link to={`${episode.id}`}>
-            <div className="d-grid gap-2">
+            <Row>
               <Button
                 variant="outline-secondary"
                 style={{ color: 'white' }}
+                className='btn'
               >
                 Open detail
               </Button>
-            </div>
+            </Row>
           </Link>
         </div>
       </div>
