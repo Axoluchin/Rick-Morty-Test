@@ -2,10 +2,12 @@ import { useState } from 'react'
 
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+import { Row } from 'react-bootstrap';
 
+import { EpisodeTile } from '../components/EpisodeTile';
 import { ApiRoutes, useAxios } from '../providers/api'
 import { Character, Page } from "../providers/api/models";
-import { Link } from 'react-router-dom';
 
 export function EpisodesList() {
   const [pagination, setPagination] = useState<{ page: number }>({ page: 1 })
@@ -24,6 +26,11 @@ export function EpisodesList() {
         </Button>
         {loading && <p className='text-info'>...loading</p>}
         {error && <p className='text-danger'>{error.toString()}</p>}
+        <div className='grid'>
+          {episodesPage?.results.map((episode) => (
+            <EpisodeTile episode={episode} />
+          ))}
+        </div>
         <Button onClick={nextPage}>Next page</Button>
       </Container>
     </div>
