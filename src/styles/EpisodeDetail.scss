@@ -1,0 +1,24 @@
+.EpisodeDetails {
+    p {
+        margin: 0;
+    }
+
+    h4 {
+        font-weight: lighter;
+        color: white;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .details {
+        background-color: rgb(67, 67, 67);
+        border-radius: 16px;
+        padding: 12px;
+        font-size: large;
+        margin: 3rem 0;
+        color: white;
+    }
+
+}
