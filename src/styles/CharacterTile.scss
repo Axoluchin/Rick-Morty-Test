@@ -1,21 +1,28 @@
 .character-tile {
+  padding: 10px;
+
+  .character-container {
+    display: flex;
+    background: rgb(61, 62, 68);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .info {
     padding: 10px;
+    margin-left: 10px;
+    color: white;
+  }
 
-    .container {
-        padding: 10px;
-        display: flex;
-        background: rgb(49, 49, 49);
-        border-radius: 80;
-    }
+  img {
+    $size: 37%;
+    width: $size;
+    height: $size;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+  }
 
-    .info {
-        margin-left: 10px;
-        color: white;
-    }
-
-    img {
-        $size: 120px;
-        width: $size;
-        width: $size;
-    }
+  small {
+    color: rgba(173, 173, 173, 1);
+  }
 }
