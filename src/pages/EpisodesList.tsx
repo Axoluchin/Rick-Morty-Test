@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import { EpisodeTile } from '../components/EpisodeTile';
 import { ApiRoutes, useAxios } from '../providers/api'
 import { Character, Page } from "../providers/api/models";
+import Row from "react-bootstrap/Row"
+
 
 export function EpisodesList() {
   const [pagination, setPagination] = useState<{ page: number }>({ page: 1 })
@@ -25,11 +27,11 @@ export function EpisodesList() {
         </Button>
         {loading && <p className='text-info'>...loading</p>}
         {error && <p className='text-danger'>{error.toString()}</p>}
-        <div className='grid'>
+        <Row>
           {episodesPage?.results.map((episode) => (
             <EpisodeTile episode={episode} />
           ))}
-        </div>
+        </Row>
         <Button onClick={nextPage}>Next page</Button>
       </Container>
     </div>
