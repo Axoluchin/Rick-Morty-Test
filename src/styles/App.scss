@@ -1,6 +1,12 @@
+
 @import "CharacterTile.scss";
 @import "EpisodeTile.scss";
 
 body {
     background: rgb(39, 43, 51) !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
 }
