@@ -2,18 +2,18 @@ import { useState } from 'react'
 
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import Row from "react-bootstrap/Row"
 
+import Header from '../components/Header';
 import { EpisodeTile } from '../components/EpisodeTile';
 import { ApiRoutes, useAxios } from '../providers/api'
-import { Character, Page } from "../providers/api/models";
-import Row from "react-bootstrap/Row"
+import { Episode, Page } from "../providers/api/models";
 
 
 export function EpisodesList() {
   const [pagination, setPagination] = useState<{ page: number }>({ page: 1 })
 
-  const [{ data: episodesPage, loading, error }] = useAxios<Page<Character>>({ url: ApiRoutes.episodes() })
+  const [{ data: episodesPage, loading, error }] = useAxios<Page<Episode>>({ url: ApiRoutes.episodes() })
 
   const nextPage = () => {
     setPagination({ page: pagination.page++ })
@@ -21,10 +21,8 @@ export function EpisodesList() {
 
   return (
     <div className="EpisodesList">
+      <Header status='Episode'/>
       <Container>
-        <Button variant='primary' onClick={nextPage}>
-          <Link to="/characters" style={{color: "white"}}>Navigate to characters</Link>
-        </Button>
         {loading && <p className='text-info'>...loading</p>}
         {error && <p className='text-danger'>{error.toString()}</p>}
         <Row>
