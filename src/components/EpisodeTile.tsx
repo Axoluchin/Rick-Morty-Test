@@ -1,5 +1,6 @@
-import { Button } from 'react-bootstrap'
+import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 import { Link } from 'react-router-dom'
 import { Episode } from '../providers/api/models/Episode'
 
@@ -19,12 +20,13 @@ export function EpisodeTile({ episode }: EpisodeTileProps) {
             <small>Air date:</small>
           </p>
           <p className="air-date">{episode.air_date}</p>
-
-          <Button>
-            <Link to={`${episode.id}`} style={{ color: 'white' }}>
-              Open detail
-            </Link>
-          </Button>
+          <div className="d-grid gap-2">
+            <Button variant="outline-secondary" size="lg">
+              <Link to={`${episode.id}`} style={{ color: 'white' }}>
+                Open detail
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </Col>
