@@ -3,7 +3,6 @@ import { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import { Row } from 'react-bootstrap';
 
 import { EpisodeTile } from '../components/EpisodeTile';
 import { ApiRoutes, useAxios } from '../providers/api'
@@ -21,8 +20,8 @@ export function EpisodesList() {
   return (
     <div className="EpisodesList">
       <Container>
-        <Button onClick={nextPage}>
-          <Link to="characters" style={{color: "white"}}>Navigate to characters</Link>
+        <Button variant='primary' onClick={nextPage}>
+          <Link to="/characters" style={{color: "white"}}>Navigate to characters</Link>
         </Button>
         {loading && <p className='text-info'>...loading</p>}
         {error && <p className='text-danger'>{error.toString()}</p>}
