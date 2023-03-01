@@ -35,11 +35,29 @@ export function EpisodesList() {
             <EpisodeTile episode={episode} key={episode.id} />
           ))}
         </Row>
-        <ButtonToolbar aria-label="Toolbar with button groups" className='justify-content-center'>
+        <ButtonToolbar
+          aria-label="Toolbar with button groups"
+          className="justify-content-center"
+        >
           <ButtonGroup className="me-2" aria-label="First group">
-            <Button onClick={() => setPage(1)}>1</Button>
-            <Button onClick={() => setPage(2)}>2</Button>
-            <Button onClick={() => setPage(3)}>3</Button>
+            <Button
+              variant={pagination.page === 1 ? 'primary' : 'secondary'}
+              onClick={() => setPage(1)}
+            >
+              1
+            </Button>
+            <Button
+              variant={pagination.page === 2 ? 'primary' : 'secondary'}
+              onClick={() => setPage(2)}
+            >
+              2
+            </Button>
+            <Button
+              variant={pagination.page === 3 ? 'primary' : 'secondary'}
+              onClick={() => setPage(3)}
+            >
+              3
+            </Button>
           </ButtonGroup>
         </ButtonToolbar>
       </Container>

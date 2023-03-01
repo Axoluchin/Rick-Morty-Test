@@ -35,6 +35,24 @@ So start the challenge! Good Look!
 
 App created using Vite compilation tool, using react as main framework/library along with typescript and bootstrap to create the skeleton.
 
-## Deployment instructions
+---
 
-// *Put deployment instructions here...*
+## Deployment instructions
+This project is deployed in Vercel, pushing to main will affect the production version. Be sure to add the environment variables before deploying.
+
+## Env 
+```
+VITE_API_BASE_URL='' // <- API from https://rickandmortyapi.com/
+```
+
+## Run in local
+
+## Install dependencies
+```
+npm install
+```
+
+## After add env run the project
+```
+npm run dev
+```
